@@ -1,0 +1,105 @@
+<!-- Day 02: 11/06/2022:  -->
+
+<!-- #### Exercises: JSX Elements
+
+1. What is a JSX element?
+2. Write your name in a JSX element and store it in a name variable
+3. Write a JSX element which displays your full name, country, title, gender, email, phone number. Use h1 for the name and p for the rest of the information and store it in a user variable
+4. Write a footer JSX element
+
+#### Exercises: Inline Style
+
+1. Create a style object for the main JSX
+2. Create a style object for the footer and app JSX
+3. Add more styles to the JSX elements
+
+#### Exercises: Internal Styles
+
+1. Apply different styles to your JSX elements
+
+#### Exercise: Inject data to JSX
+
+1. Practice how to make JSX element and injecting dynamic data(string, number, boolean, array, object) -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Day 02</title>
+
+    <!-- reset CSS -->
+    <style>
+        * {
+            padding: 0 0;
+            box-sizing: border-box;
+            margin: 0 0;
+        }
+
+        body {
+            line-height: 1.5;
+            font-family: 'Courier New', Courier, monospace;
+            font-weight: 300;
+            height: 100%;
+            padding-left: 12px;
+        }
+    </style>
+
+</head>
+<body>
+    <div class="root"></div>
+
+    <script src="https://unpkg.com/react@18/umd/react.development.js" crossorigin></script>
+    <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js" crossorigin></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <script type = "text/babel">
+
+    // exercises :JSX elements
+
+    let name ="Bùi Thị Thanh Ngân";
+    let jsxName = <h1 style = {{color: 'blue'}}>{name}</h1>
+    
+
+    let user = (
+        <div className="user">
+        <h1 style = {{color: 'coral'}}>Bùi Thị Thanh Ngân</h1>
+        <p style = {{color: 'green'}}>
+            country : Việt Nam 
+            <br></br>
+            title : day 02 of 30 days react challenge ! 
+            <br></br>
+            gender : female
+            <br></br>
+            email : nganbui9a2017@gmail.com
+            <br></br>
+            phone number : 0382140479
+            <br></br>
+        </p>
+        </div>
+    )
+
+    let footer = (
+        <div className="footer">
+        <p style = {{backgroundColor : 'pink'}}>build by Thanh Ngân</p>
+        </div>
+    )
+
+    let show = (
+        <div className="inform">
+        {jsxName}
+        {user}
+        {footer}
+        </div>
+    )
+
+    const root = ReactDOM.createRoot(document.querySelector('.root'));
+    root.render(show)
+
+    </script>
+
+    
+    
+</body>
+</html>
