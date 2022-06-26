@@ -1,0 +1,16 @@
+*{
+    padding: 0 0;
+    margin: 0 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-family: 'Courier New', Courier, monospace;
+    line-height: 1.5;
+    text-decoration: none;
+}
+
+a {
+    text-decoration: none;
+    color: #333;
+}

@@ -1,0 +1,21 @@
+#nav {
+    display: flex;
+    list-style: none;
+    justify-content: center;
+}
+
+#nav li {
+    padding: 12px 12px;
+    background-color: cornflowerblue;
+    text-decoration: none !important;
+    font-size: 20px;
+    border: solid #35f 1px;
+}
+
+#nav li:hover {
+    background-color: coral;
+}
+
+#nav li:hover a {
+    color: #fff ;
+}

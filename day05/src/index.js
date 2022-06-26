@@ -90,7 +90,7 @@ let styleUl = {
 
 let RandomNumber = () => (
     <div className='number-generator' style = {{
-        padding: '0px 24px'
+        padding: '0px 24px',
     }}>
         <ul style = {styleUl} >
             {listNumbers}
