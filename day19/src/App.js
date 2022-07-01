@@ -7,9 +7,8 @@ import {
 
 import About from './pages/About'
 import Home from './pages/Home'
-import Header from './components/Header'
 import Footer from './components/Footer'
-
+import Header from './components/Header'
 
 const App = () => {
 
@@ -20,7 +19,7 @@ const App = () => {
                 <Route path = '/about' element = {<About/>} ></Route>
                 <Route path = '/' element = {<Home/>} ></Route>
             </Routes>
-            <Footer/>
+            {/* <Footer/> */}
         </Router>
     )
 }

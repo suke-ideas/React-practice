@@ -1,4 +1,5 @@
 import React, {useState, useEffect} from 'react'
+import Nav from '../components/Nav'
 
 let totalCats = 0;
 let weight_average = 0;
@@ -59,8 +60,51 @@ const ListCats = () => {
             }
         }
         )   
+        
+        // Tính sô lượng mèo, cân nặng trung bình, tuổi thọ trung bình
+        totalCats = cats.length
+        for (let cat of cats) {
+            // Lấy dữ liệu vào biến string , tách dữ liệu và tính lấy trung bình gán vào average
+            
+            let metric = cat.weight.metric
+            let vt  = metric.indexOf('-')
+            let s1 = '' , s2 = ''
+            for (let i = 0; i < metric.length; i++) {
+                if (i === vt) {
+                    i++
+                }
+                i < vt ? s1 += metric[i] : s2 += metric[i]
+            }
+            let average = (+s1 + +s2)/2
+            weight_average += average
+
+            // Tuổi thọ trung bình
+            let span = cat.life_span
+            vt = span.indexOf('-')
+            s1 = ''
+            s2 = ''
+            for (let i = 0 ; i < span.length ; i++) {
+                if (i===vt) {
+                    i++
+                }
+                i < vt ? s1 += span[i] : s2 += span[i]
+            }
+            average = (+s1 + +s2)/2
+            years_average += average
+        }
+        weight_average /= totalCats;
+        years_average /= totalCats;
+        // console.log(weight_average, years_average)
+        
+        weight_average = Math.round(weight_average*100) / 100;
+        years_average = Math.round(years_average*100) / 100;
+
         return List
+        
+} else {
+    console.log("error")
 }
 }
 
 export default ListCats
+export {totalCats, weight_average, years_average}

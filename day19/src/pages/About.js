@@ -1,8 +1,8 @@
 import React from 'react'
+import TodoList from '../components/todoList'
 
 const About = () => (
-    <h2>Đây là trang của tui</h2>
-
+    <TodoList/>
 )
 
 export default About

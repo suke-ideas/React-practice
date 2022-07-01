@@ -11,7 +11,7 @@ const Footer = () => (
             
         }}
             >
-                 Made by thanhngan22 
+                thanhngan22 
             </marquee>
     </div>
 )
